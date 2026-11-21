@@ -1,8 +1,5 @@
 {
   "common": {
-    "home": "Home",
-    "networkIssue": "We couldn't load the page because of a network issue. Please check your connection and try again.",
-    "retry": "Retry",
     "close": "Close"
   },
   "header": {

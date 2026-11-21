@@ -2,7 +2,7 @@
 import { useI18n } from 'vue-i18n'
 import { mdiTranslate } from '@mdi/js'
 
-const { locale } = useI18n()
+const { locale, t } = useI18n()
 
 const languages = [
   { code: 'en', name: 'English' },
@@ -18,7 +18,13 @@ function changeLanguage(lang: string) {
 <template>
   <v-menu>
     <template #activator="{ props }">
-      <v-btn v-bind="props" size="small" :icon="mdiTranslate" variant="text"></v-btn>
+      <v-btn
+        v-bind="props"
+        :icon="mdiTranslate"
+        :aria-label="t('header.changeLanguage')"
+        size="small"
+        variant="text"
+      ></v-btn>
     </template>
     <v-list>
       <v-list-item

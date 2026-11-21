@@ -37,5 +37,9 @@ __screenshots__/
 
 # Vite
 *.timestamp-*-*.mjs
+.vite
+
+# Claude Code
+.claude
 
 .env

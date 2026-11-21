@@ -6,7 +6,7 @@ const { locale, t } = useI18n()
 
 const languages = [
   { code: 'en', name: 'English' },
-  { code: 'es', name: 'Spanish' },
+  { code: 'es', name: 'Español' },
 ]
 
 function changeLanguage(lang: string) {

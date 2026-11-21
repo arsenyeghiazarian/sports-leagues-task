@@ -1,0 +1,36 @@
+{
+  "common": {
+    "close": "Cerrar"
+  },
+  "header": {
+    "title": "Ligas Deportivas",
+    "changeLanguage": "Cambiar idioma",
+    "darkTheme": "Cambiar a tema oscuro",
+    "lightTheme": "Cambiar a tema claro"
+  },
+  "notFound": {
+    "title": "Página no encontrada / 404",
+    "message": "La página que buscas no existe",
+    "goToMain": "Ir a la página principal"
+  },
+  "pages": {
+    "leagues": "Ligas",
+    "pageNotFound": "Página no encontrada"
+  },
+  "meta": {
+    "leagues": "Explora ligas deportivas de todo el mundo, busca por nombre, filtra por deporte y consulta los escudos de cada temporada.",
+    "pageNotFound": "No pudimos encontrar la página que buscas. Revisa la URL e inténtalo de nuevo."
+  },
+  "leagueBadge": {
+    "seasons": "Temporadas",
+    "noBadges": "No hay escudos de temporada disponibles para esta liga.",
+    "badgeAlt": "Escudo de {league}, temporada {season}"
+  },
+  "leagues": {
+    "searchLabel": "Buscar ligas",
+    "sportLabel": "Deporte",
+    "allSports": "Todos los deportes",
+    "noResults": "Ninguna liga coincide con tus filtros.",
+    "clearFilters": "Limpiar filtros"
+  }
+}

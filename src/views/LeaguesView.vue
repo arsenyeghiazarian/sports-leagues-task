@@ -44,6 +44,8 @@ onMounted(() => leaguesStore.getLeaguesData())
 
 <template>
   <v-container>
+    <h1 class="d-sr-only">{{ t('pages.leagues') }}</h1>
+
     <league-filters
       v-model:search="searchQuery"
       v-model:sport="selectedSport"

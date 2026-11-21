@@ -21,6 +21,7 @@ const isDark = computed(() => theme.global.name.value === 'dark')
         <language-switch></language-switch>
         <v-btn
           :icon="isDark ? mdiWeatherSunny : mdiWeatherNight"
+          :aria-label="t(isDark ? 'header.lightTheme' : 'header.darkTheme')"
           size="small"
           @click="theme.toggle()"
         ></v-btn>

@@ -1,9 +1,11 @@
 <script setup lang="ts">
-import { onMounted } from 'vue'
+import { onMounted, ref } from 'vue'
 import { storeToRefs } from 'pinia'
 import { useLeaguesStore } from '@/store/leagues.store.ts'
 import LeagueCard from '@/components/LeagueCard.vue'
 import LeagueCardSkeleton from '@/components/LeagueCardSkeleton.vue'
+import LeagueBadge from '@/components/LeagueBadge.vue'
+import type { ILeague } from '@/interfaces/league.interface.ts'
 import { usePageTitle } from '@/composables/usePageTitle.ts'
 import { useLeagueFilters } from '@/composables/useLeagueFilters.ts'
 import LeagueFilters from '@/components/LeagueFilters.vue'
@@ -15,6 +17,14 @@ const SKELETON_COUNT = 6
 usePageTitle()
 
 const { t } = useI18n()
+
+const dialogState = ref<boolean>(false)
+const selectedLeague = ref<ILeague | null>(null)
+
+const openLeague = (league: ILeague) => {
+  selectedLeague.value = league
+  dialogState.value = true
+}
 
 const leaguesStore = useLeaguesStore()
 const { leaguesData, isLeaguesLoading } = storeToRefs(leaguesStore)
@@ -58,9 +68,10 @@ onMounted(() => leaguesStore.getLeaguesData())
       </v-col>
       <template v-else>
         <v-col cols="12" sm="6" v-for="league in filteredLeagues" :key="league.idLeague">
-          <league-card :league></league-card>
+          <league-card :league @click="openLeague(league)"></league-card>
         </v-col>
       </template>
     </v-row>
+    <league-badge v-model="dialogState" :league="selectedLeague"></league-badge>
   </v-container>
 </template>

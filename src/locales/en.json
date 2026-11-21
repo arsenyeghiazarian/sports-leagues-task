@@ -2,17 +2,38 @@
   "common": {
     "home": "Home",
     "networkIssue": "We couldn't load the page because of a network issue. Please check your connection and try again.",
-    "retry": "Retry"
+    "retry": "Retry",
+    "close": "Close"
   },
-  "header": { "title": "Sports Leagues" },
+  "header": {
+    "title": "Sports Leagues",
+    "changeLanguage": "Change language",
+    "darkTheme": "Switch to dark theme",
+    "lightTheme": "Switch to light theme"
+  },
   "notFound": {
     "title": "Page Not Found / 404",
     "message": "The page you are looking for doesn't exist",
     "goToMain": "Go To Main Page"
   },
-  "pages": { "home": "Leagues", "pageNotFound": "Page Not Found" },
+  "pages": {
+    "leagues": "Leagues",
+    "pageNotFound": "Page Not Found"
+  },
   "meta": {
-    "leagues": "",
+    "leagues": "Browse sports leagues from around the world, search by name, filter by sport and view season badges.",
     "pageNotFound": "The page you are looking for could not be found. Please check the URL and try again."
+  },
+  "leagueBadge": {
+    "seasons": "Seasons",
+    "noBadges": "No season badges available for this league.",
+    "badgeAlt": "{league} badge, season {season}"
+  },
+  "leagues": {
+    "searchLabel": "Search leagues",
+    "sportLabel": "Sport",
+    "allSports": "All sports",
+    "noResults": "No leagues match your filters.",
+    "clearFilters": "Clear filters"
   }
 }

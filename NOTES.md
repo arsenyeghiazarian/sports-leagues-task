@@ -10,6 +10,9 @@ direction and reviewed and adjusted everything it produced. It helped with:
   tree-shaken SVG icons (`@mdi/js`).
 - **Typing:** TypeScript interfaces from sample API responses, and a generic `HttpService.get<T>`.
 - **Lighthouse review:** analysing the report and fixing the accessibility issues it pointed to.
+- **Spanish translation:** `es.json`, translated from `en.json` with the same keys.
+- **CI/CD:** GitHub Actions workflows that run lint, format check, type-check and build on every
+  pull request, and deploy `main` to GitHub Pages (base path and SPA fallback included).
 - **Checking its own work:** running type-check, lint and builds, and checking the UI in a browser
   (desktop and phone widths).
 
@@ -65,7 +68,9 @@ interfaces/                  ILeague, ISeason and the API response types
   through Vuetify Sass variables instead of override CSS.
 - **Skeleton loaders** show while data loads, and the error snackbar uses a central error handler.
 - **Responsive grid:** one card per row on phones, two from 600px up.
-- **Light/dark theme toggle and vue-i18n.** All UI text is in `src/locales/en.json`.
+- **Light/dark theme toggle and vue-i18n** with English and Spanish. All UI text is in
+  `src/locales/` (`en.json`, `es.json`); league and sport names come from the API and aren't
+  translated.
 
 ### Performance
 
@@ -90,12 +95,3 @@ interfaces/                  ILeague, ISeason and the API response types
 
 - **TypeScript in strict mode,** with `noUncheckedIndexedAccess`.
 - **ESLint, oxlint and Prettier** run through `npm run lint` and `npm run format`.
-
-## Known limitations / next steps
-
-- **No automated tests yet.** The next step would be unit tests for the store cache and
-  `useLeagueFilters` (Vitest), plus one end-to-end test for the search → open dialog flow.
-- **The language switcher offers Spanish,** but only `en.json` exists, so it falls back to
-  English.
-- **`isSeasonsLoading` is a single flag for the whole app.** That's fine with one dialog, but it
-  should become per-league if several components load seasons at once.
